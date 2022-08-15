@@ -1,0 +1,52 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pago</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/telaNpago.css">
+    </head>
+    <body>
+        <div class="icon-mobile">
+            <img src="/images/menu-mobile.png" />
+        </div>
+        <div class="menu-top">
+            <div class="text-menu">MENU</div>
+        </div>
+        <div class="area-menu">
+            <nav class="menu">
+                <ul>
+                    <li ><div class="area-img"><img src="/images/ICON NÃO-PAGO.png"/></div><a href="/naopago">VISUALIZAR NÃO PAGO</a></li>
+                    <li class="active"><div class="area-img"><img src="/images/ICON CHECK.png"/></div><a href="/pago">VISUALIZAR PAGO</a><div class="select"></div></li>
+                    <li><div class="area-img"><img src="/images/ICON EDIT.png" /></div><a href="/editar">EDITAR</a></li>
+                    <li><div class="area-img"><img src="/images/ICON ADD.png" /></div><a href="/cadastrar">CADASTRAR</a></li>
+                    <li><div class="area-img"><img src="/images/ICON LIST.png" /></div><a href="">VISUALIZAR DADOS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="area-pay">
+            <div class="text-pay">Apenas {{length}} pagaram</div>
+        </div>
+        <div class="area-main">
+            <div class="area-debt">
+            {{#user}}    
+                <div class="area-client" id="{{id}}">
+                    <div class="tagP" id="tag"></div>
+                    <div class="area-info">
+                        <div class="area-left">
+                            <div class="area-client-info">Nome: {{child}}</div>
+                            <div class="area-client-info">Valor: {{value}},00</div>
+                        </div>
+                        <div class="area-right">
+                            <div class="area-client-info">Telefone: {{fone}}</div>
+                            <div class="area-client-info">Escola: {{school}}</div>
+                        </div>
+                    </div>
+                </div>
+            {{/user}}
+            </div>
+        </div>
+        <script type="text/javascript" src="/js/Npago.js"></script>
+    </body>
+</html>

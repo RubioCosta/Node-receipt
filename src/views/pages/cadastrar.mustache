@@ -1,0 +1,65 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cadastrar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/cadastro.css">
+    </head>
+    <body>
+        <div class="icon-mobile">
+            <img src="/images/menu-mobile.png" />
+        </div>
+        <div class="menu-top">
+            <div class="text-menu">MENU</div>
+        </div>
+        <div class="area-menu">
+            <nav class="menu">
+                <ul>
+                    <li ><div class="area-img"><img src="/images/ICON NÃO-PAGO.png"/></div><a href="/naopago">VISUALIZAR NÃO PAGO</a></li>
+                    <li><div class="area-img"><img src="/images/ICON CHECK.png"/></div><a href="/pago">VISUALIZAR PAGO</a></li>
+                    <li ><div class="area-img"><img src="/images/ICON EDIT.png" /></div><a href="/editar">EDITAR</a></li>
+                    <li class="active"><div class="area-img"><img src="/images/ICON ADD.png" /></div><a href="/cadastrar">CADASTRAR</a><div class="select"></div></li>
+                    <li><div class="area-img"><img src="/images/ICON LIST.png" /></div><a href="dados.html">VISUALIZAR DADOS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="area-main">
+            <div class="area-input">
+                <form class="inputs" method="get" action="/cadastrar" enctype='multipart/form-data'>
+                    <div class="area-pai">
+                        <label>Nome do pai:</label>
+                        <input type="text" name="father" placeholder="Digite o nome do pai">
+                    </div>
+                    <div class="area-mae">
+                        <label>Nome da mãe:</label>
+                        <input type="text" name="mother" placeholder="Digite o nome da mãe">
+                    </div>
+                    <div class="area-nome">
+                        <label>Nome:</label>
+                        <input type="text" name="child" placeholder="Digite o nome">
+                    </div>
+                    <div class="area-escola">
+                        <label>Escola:</label>
+                        <input type="text" name="school" placeholder="Digite o nome da escola">
+                    </div>
+                    <div class="fone-value">
+                        <did class="area-fone">
+                            <label>Telefone:</label>
+                            <input type="text" name="fone" placeholder="Digite o telefone">
+                        </did>
+                        <div class="area-value">
+                            <label>Valor:</label>
+                            <input type="text" name="value" placeholder="Digite o valor">
+                        </div>
+                    </div> 
+                    <div class="btn">
+                        <button type="submit">Cancelar</button>
+                        <button type="submit">Salvar</button>
+                    </div>                   
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

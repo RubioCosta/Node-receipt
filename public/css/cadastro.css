@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Titan+One&display=swap');
+
+
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+.icon-mobile {
+    display: none;
+}
+
+.menu-top{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: #777777;
+}
+
+.text-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 70px;
+    font-family: Lato;
+    font-size: 25px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.area-menu {
+    top: 70px;
+    width: 380px;
+    height: 100vh;
+    position: fixed;
+    background-color: #d9d9d9;
+}
+
+.menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu ul li {
+    display: flex;
+    height: 90px;
+    list-style: none;
+}
+
+.menu ul li:hover {
+    background-color: #c3c3c3c3;
+    transition: 0.5s;
+}
+
+.active{
+    background-color: #c3c3c3c3; 
+}
+
+.select {
+    height: 90px; 
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent; 
+    border-right:25px solid #777777; 
+}
+
+.menu ul li a{
+    padding: 0px;
+    margin: 0px;
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    height: 90px;
+    color: #000000;
+    font-weight: 600;
+    font-family: Lato;
+}
+
+.area-img {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+    flex: 1;
+}
+
+img {
+    width: 45px;
+}
+
+
+
+    /*ÁREA MAIN*/
+
+.area-main {
+    position: relative;
+    left: 395;
+    top: 70;
+    padding: 10px;
+    width: calc(100vw - 410px);
+}
+    /*Input*/
+
+.area-input{
+    margin-top: 10px;
+    height: 385px;
+    box-sizing: border-box !important;
+    border: 5px solid #acaaaa;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.inputs div label{
+    min-width: 105px;
+}
+
+
+.area-pai, .area-mae, .area-nome, .area-escola, .area-fone, .area-value{
+    display: flex;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.area-pai label:first-child{
+    margin-top: 0px;
+}
+
+.area-pai input, .area-mae input, .area-nome input, .area-escola input, .area-fone input, .area-value input{
+    outline: 0;
+    border: 0;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.area-pai input{
+    border-bottom: 2px solid #acaaaa ;
+    margin-left: 15px;
+    width: 91.5%;
+    min-width: 280px;
+}
+
+
+.area-mae input{
+    border-bottom: 2px solid #acaaaa ;
+    margin-left: 15px;
+    width: 91.5%;
+    min-width: 280px;
+}
+
+.area-nome input{
+    border-bottom: 2px solid #acaaaa ;
+    margin-left: 15px;
+    width: 91.5%;
+    min-width: 280px;
+}
+
+.area-escola input{
+    border-bottom: 2px solid #acaaaa ;
+    margin-left: 15px;
+    width: 91.5%;
+    min-width: 280px;
+}
+
+
+
+.fone-value{
+    display: flex;
+    width: 99.6%;
+}
+
+.area-value{
+    flex: 1;
+    display: flex;
+    margin-left: 15px;
+}
+
+.area-fone {
+    flex: 8;
+    display: flex;
+}
+
+.area-fone input{
+    flex: 10;
+    border-bottom: 2px solid #acaaaa ;
+    min-width: 280px;
+    margin-left: 15px;
+}
+
+.area-value input{
+    flex: 1;
+    border-bottom: 2px solid #acaaaa ;
+    min-width: 280px;
+}
+
+.area-value label {
+    min-width: 50px !important;
+}
+
+
+.btn{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button{
+    font-weight: 600;
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #777777;
+    color: #FFFFFF;
+}
+
+.btn button:hover{
+    background-color: #949494;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn button:first-child{
+    margin-right: 15px;
+}
+
+
+
+
+@media only screen and (max-width: 1211px) {
+    .fone-value{
+        flex-direction: column;
+    }
+
+    .area-value {
+        margin-left: 0px;
+    }
+
+    .area-value label {
+        min-width: 115px !important;
+    }
+
+    .btn{
+        margin-top: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px){
+    .area-menu {
+        width: 250px;
+    }
+
+    .area-main {
+        left: 255;
+        width: calc(100vw - 260px);
+        right: 15;
+    }
+
+    .area-img{
+        margin-left: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px){
+    .area-menu {
+        display: none;
+    }
+
+    .area-main {
+        top: 70;
+        left: 0;
+        width: auto;
+    }
+    .menu-top {
+        display: none;
+    }
+
+    .icon-mobile {
+        display: block;
+        position: fixed;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+    }
+
+    .icon-mobile img {
+        position: absolute;
+        top: 10;
+        left: 10;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .inputs input {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .area-pai {
+        margin-top: 0px;
+    }
+
+    .area-pai, .area-mae, .area-nome, .area-escola, .area-fone, .area-value {
+        display: flex;
+        font-size: 16px;
+        flex-direction: column;
+    }
+
+    .area-input {
+        height: 480px;
+    }
+}
+
