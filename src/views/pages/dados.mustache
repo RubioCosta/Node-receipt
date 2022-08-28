@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cadastrar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/dados.css">
+    </head>
+    <body>
+        <div class="icon-mobile">
+            <img src="/images/menu-mobile.png" />
+        </div>
+        <div class="menu-top">
+            <div class="text-menu">MENU</div>
+        </div>
+        <div class="area-menu">
+            <nav class="menu">
+                <ul>
+                    <li ><div class="area-img"><img src="/images/ICON NÃO-PAGO.png"/></div><a href="/naopago">VISUALIZAR NÃO PAGO</a></li>
+                    <li><div class="area-img"><img src="/images/ICON CHECK.png"/></div><a href="/pago">VISUALIZAR PAGO</a></li>
+                    <li ><div class="area-img"><img src="/images/ICON EDIT.png" /></div><a href="/editar">EDITAR</a></li>
+                    <li><div class="area-img"><img src="/images/ICON ADD.png" /></div><a href="/cadastrar">CADASTRAR</a></li>
+                    <li class="active"><div class="area-img"><img src="/images/ICON LIST.png" /></div><a href="/dados">VISUALIZAR DADOS</a><div class="select"></div></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="area-main">
+            <div class="area-info">
+                <div><b>Total cadastrado:</b> {{quant}}</div>
+                <div><b>Lucro total:</b> R$ {{valorTotal}},00</div>
+                    <form method="get" action="/gerarpdf" enctype='multipart/form-data'>
+                        <input class="dia" placeholder="Dia" name="dia" type="number"  min="1" max="31"/>
+                        <input class="mes" placeholder="Mês" name="mes" type="number" min="1" max="12"/>
+                        <input class="ano" placeholder="Ano" name="ano" type="number" min="2022"/>
+                        <label>Texto:</label>
+                        <input name="fano" type="checkbox" value="1">
+                        <button class="pdf" type="submit">GERAR PDF RECIBOS</button>
+                    </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="/js/dados.js"></script>
+    </body>
+</html>
