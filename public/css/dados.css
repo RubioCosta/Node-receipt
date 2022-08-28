@@ -42,6 +42,20 @@ body {
     background-color: #d9d9d9;
 }
 
+form label{
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.dia, .mes, .ano{
+    width: 100px;
+}
+
+.ano {
+    margin-bottom: 20px;
+}
+
 .menu ul {
     margin: 0px;
     padding: 0px;
@@ -98,7 +112,7 @@ img {
 
 
     /*ÁREA MAIN*/
-
+    
 .area-main {
     position: relative;
     left: 395;
@@ -113,15 +127,34 @@ img {
     font-size: 17px;
 }
 
+.dia{
+    margin-top: 20px;
+}
+
+
+input{
+    display: flex;
+    margin-top: 10px;
+}
+
 .pdf{
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #777777;
     width: 200px;
+    height: 35px;
     color: #FFFFFF;
     cursor: pointer;
-    margin-top: 20px
+    margin-top: 20px;
+    border: none;
+
+}
+
+.PDF:last-child{
+    height: 50px;
+    padding-left: 17px;
 }
 
 .pdf:hover{

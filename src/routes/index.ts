@@ -9,5 +9,7 @@ router.get('/naopago', dataController.npago);
 router.get('/pago', dataController.pago);
 router.get('/cadastrar', dataController.cadastrar);
 router.get('/editar', dataController.editar);
+router.get('/dados', dataController.dados);
+router.get('/gerarpdf', dataController.gerar);
 
 export default router;

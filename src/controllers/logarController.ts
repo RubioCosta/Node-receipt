@@ -10,11 +10,12 @@ export const home = (req: Request, res: Response) => {
 export const login = async (req: Request, res: Response) => {
     let user: string = req.body.name;
     let password: string = req.body.password;
-    
 
     let verify = await User.findOne({
         where: {name: user}
     });
+
+
     if(verify) {
         let passConsult = JSON.stringify(verify['password']).replace(/"/g, '');
         if(await bcrypt.compare(password, passConsult)){

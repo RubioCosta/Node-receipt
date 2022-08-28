@@ -21,12 +21,12 @@
                     <li class="active"><div class="area-img"><img src="/images/ICON CHECK.png"/></div><a href="/pago">VISUALIZAR PAGO</a><div class="select"></div></li>
                     <li><div class="area-img"><img src="/images/ICON EDIT.png" /></div><a href="/editar">EDITAR</a></li>
                     <li><div class="area-img"><img src="/images/ICON ADD.png" /></div><a href="/cadastrar">CADASTRAR</a></li>
-                    <li><div class="area-img"><img src="/images/ICON LIST.png" /></div><a href="">VISUALIZAR DADOS</a></li>
+                    <li><div class="area-img"><img src="/images/ICON LIST.png" /></div><a href="/dados">VISUALIZAR DADOS</a></li>
                 </ul>
             </nav>
         </div>
         <div class="area-pay">
-            <div class="text-pay">Apenas {{length}} pagaram</div>
+            <div class="text-pay">Apenas <span class="quant">&nbsp {{length}} &nbsp</span> pagaram</div>
         </div>
         <div class="area-main">
             <div class="area-debt">
@@ -47,6 +47,7 @@
             {{/user}}
             </div>
         </div>
-        <script type="text/javascript" src="/js/Npago.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js" integrity="sha512-9mpsATI0KClwt+xVZfbcf2lJ8IFBAwsubJ6mI3rtULwyM3fBmQFzj0It4tGqxLOGQwGfJdk/G+fANnxfq9/cew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="/js/pago.js"></script>
     </body>
 </html>

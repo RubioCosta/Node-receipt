@@ -21,7 +21,7 @@
                     <li><div class="area-img"><img src="/images/ICON CHECK.png"/></div><a href="/pago">VISUALIZAR PAGO</a></li>
                     <li class="active"><div class="area-img"><img src="images/ICON EDIT.png" /></div><a href="/editar">EDITAR</a><div class="select"></div></li>
                     <li><div class="area-img"><img src="/images/ICON ADD.png" /></div><a href="/cadastrar">CADASTRAR</a></li>
-                    <li><div class="area-img"><img src="images/ICON LIST.png" /></div><a href="#">VISUALIZAR DADOS</a></li>
+                    <li><div class="area-img"><img src="images/ICON LIST.png" /></div><a href="/dados">VISUALIZAR DADOS</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,19 +30,12 @@
         </div>
         <div class="area-main">
             <div class="area-names">
-                <div class="client" id="1">
-                    <div class="name">Nome: Rubio Rodrigo Costa</div>
-                    <div class="school">Escola: Albano Kanzler</div>
-                </div>       
-                <div class="client" id="2">
-                    <div class="name">Nome: Rubio Rodrigo Costa</div>
-                    <div class="school">Escola: Albano Kanzler</div>
-                </div> 
-                <div class="client" id="3">
-                    <div class="name">Nome: Rubio Rodrigo Costa</div>
-                    <div class="school">Escola: Albano Kanzler</div>
-                </div> 
-                
+            {{#user}}
+                <div class="client" id="{{id}}">
+                    <div class="name">Nome: {{child}}</div>
+                    <div class="school">Escola: {{school}}</div>
+                </div>      
+            {{/user}}               
             </div>
             <div class="area-input">
                 <form class="inputs">
@@ -73,14 +66,13 @@
                         </div>
                     </div> 
                     <div class="btn">
-                        <button>Salvar</button>
-                        <button>Excluir</button>
+                        <button id="salvar">Salvar</button>
+                        <button id="excluir">Excluir</button>
                     </div>                   
                 </form>
             </div>
         </div>
-        <script src="/scoket.io/socket.io.js"></script>
-        <script src="/js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js" integrity="sha512-9mpsATI0KClwt+xVZfbcf2lJ8IFBAwsubJ6mI3rtULwyM3fBmQFzj0It4tGqxLOGQwGfJdk/G+fANnxfq9/cew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="/js/editar.js"></script>
     </body>
 </html>
